@@ -1,0 +1,4 @@
+opencv-python-headless
+streamlit==1.4.0
+streamlit-webrtc==0.36.0
+click==8.0.0
