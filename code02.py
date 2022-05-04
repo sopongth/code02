@@ -1,7 +1,7 @@
 import streamlit as st
-import cv2
+from streamlit_webrtc import webrtc_streamer
 
-img_file = st.file_uploader("เปิดไฟล์ภาพ", type=["png","jpg"])
+st.title("ทดสอบกล้อง")
 
-if img_file is not None:
-    st.image(img_file,channels="BGR")
+webrtc_streamer(key="test",
+                media_stream_constraints={"video": True,"audio": False})
